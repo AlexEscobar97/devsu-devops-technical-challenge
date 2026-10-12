@@ -1,0 +1,16 @@
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: devsu-java-service
+  labels:
+    app: devsu-java
+spec:
+  type: ClusterIP
+  selector:
+    app: devsu-java
+  ports:
+    - name: http
+      protocol: TCP
+      port: 8000
+      targetPort: 8000
